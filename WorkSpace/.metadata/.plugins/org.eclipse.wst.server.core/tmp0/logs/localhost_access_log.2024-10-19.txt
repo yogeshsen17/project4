@@ -1,0 +1,17 @@
+127.0.0.1 - - [19/Oct/2024:13:45:58 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:46:01 +0530] "GET /ORS_Project4/ HTTP/1.1" 200 780
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:47:31 +0530] "GET /ORS_Project4/WelcomeCtl HTTP/1.1" 200 1315
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:47:33 +0530] "GET /ORS_Project4/LoginCtl HTTP/1.1" 200 2571
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:47:33 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:47:51 +0530] "POST /ORS_Project4/LoginCtl HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:47:51 +0530] "GET /ORS_Project4/WelcomeCtl HTTP/1.1" 200 3366
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:48:17 +0530] "GET /ORS_Project4/ctl/UserListCtl HTTP/1.1" 200 11503
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:13:48:17 +0530] "GET /resources/demos/style.css HTTP/1.1" 404 784
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:21 +0530] "POST /ORS_Project4/ctl/UserListCtl HTTP/1.1" 200 2648
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:34 +0530] "POST /ORS_Project4/LoginCtl HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:35 +0530] "GET /ORS_Project4/ctl/UserListCtl HTTP/1.1" 200 11503
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:35 +0530] "GET /resources/demos/style.css HTTP/1.1" 404 784
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:39 +0530] "POST /ORS_Project4/ctl/UserListCtl HTTP/1.1" 200 11399
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:39 +0530] "GET /resources/demos/style.css HTTP/1.1" 404 784
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:58 +0530] "POST /ORS_Project4/ctl/UserListCtl HTTP/1.1" 200 11503
+0:0:0:0:0:0:0:1 - - [19/Oct/2024:14:39:58 +0530] "GET /resources/demos/style.css HTTP/1.1" 404 784
