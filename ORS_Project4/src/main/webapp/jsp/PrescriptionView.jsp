@@ -83,7 +83,7 @@
 					<th style="padding: 3px"></th>
 				</tr>
 
-								<tr>
+				<tr>
 				<tr>
 					<th style="padding: 3px"></th>
 				</tr>
@@ -105,22 +105,20 @@
 					<th style="padding: 3px"></th>
 				</tr>
 				<tr>
-					<th align="left">Capacity<span style="color: red">*</span>
-						:
+					<th align="left">Capacity<span style="color: red">*</span> :
 					</th>
 					<td><input type="text" name="Capacity"
 						placeholder="Enter Capacity" size="26"
-						value="<%=DataUtility.getStringData(bean.getCapacity())%>"></td>
+						value="<%=DataUtility.getStringData(bean.getCapacity()).equals("0") ? ""
+					: DataUtility.getStringData(bean.getCapacity())%>"></td>
 					<td style="position: fixed"><font color="red"> <%=ServletUtility.getErrorMessage("Capacity", request)%></font></td>
 				</tr>
-				
+
 				<tr>
-					<th align="left">Date <span style="color: red">*</span>
-						:
+					<th align="left">Date <span style="color: red">*</span> :
 					</th>
-					<td><input type="text" name="Date"
-						placeholder="Enter Date" size="26" readonly="readonly"
-						id="udatee"
+					<td><input type="text" name="Date" placeholder="Enter Date"
+						size="26" readonly="readonly" id="udatee"
 						value="<%=DataUtility.getDateString(bean.getDate())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("Date", request)%></font></td>
 				</tr>
@@ -134,8 +132,8 @@
 						if (bean.getId() > 0) {
 					%>
 					<td colspan="2">&nbsp; &emsp; <input type="submit"
-						name="operation" value="<%=PrescriptionCtl.OP_UPDATE%>"> &nbsp;
-						&nbsp; <input type="submit" name="operation"
+						name="operation" value="<%=PrescriptionCtl.OP_UPDATE%>">
+						&nbsp; &nbsp; <input type="submit" name="operation"
 						value="<%=PrescriptionCtl.OP_CANCEL%>"></td>
 
 					<%
@@ -143,8 +141,8 @@
 					%>
 
 					<td colspan="2">&nbsp; &emsp; <input type="submit"
-						name="operation" value="<%=PrescriptionCtl.OP_SAVE%>"> &nbsp;
-						&nbsp; <input type="submit" name="operation"
+						name="operation" value="<%=PrescriptionCtl.OP_SAVE%>">
+						&nbsp; &nbsp; <input type="submit" name="operation"
 						value="<%=PrescriptionCtl.OP_RESET%>"></td>
 
 					<%

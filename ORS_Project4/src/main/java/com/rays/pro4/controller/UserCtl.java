@@ -25,7 +25,7 @@ import com.rays.pro4.Util.ServletUtility;
 /**
  * The Class UserCtl.
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  * 
  */
 

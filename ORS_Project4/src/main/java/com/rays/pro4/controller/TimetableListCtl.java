@@ -26,7 +26,7 @@ import com.rays.pro4.Util.ServletUtility;
 /**
 * The Class TimeTableListCtl.
 * 
-*  @authorHimanshu Jain
+*  @authorYogesh Sen
 * 
 */
 @WebServlet(name = "TimeTableListCtl", urlPatterns = {"/ctl/TimeTableListCtl"})

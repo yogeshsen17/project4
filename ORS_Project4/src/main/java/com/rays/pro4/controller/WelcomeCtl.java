@@ -12,7 +12,7 @@ import com.rays.pro4.Util.ServletUtility;
 /**
 * Welcome functionality Controller. Performs operation for Show Welcome page
 * 
-*  @authorHimanshu Jain
+*  @authorYogesh Sen
 */
 
 @WebServlet(name = "WelcomeCtl", urlPatterns = { "/WelcomeCtl" })

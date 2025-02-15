@@ -25,17 +25,17 @@
     <tr ><th></th>
        <td width="90%" >
       
-        <a href="<%=ORSView.WELCOME_CTL%>">Welcome</b></a>  |
+        <a href="<%=ORSView.WELCOME_CTL%>">Welcome</a>  |
       
             	<%
             		if (userLoggedIn) {
       		 	 %> 
-       <a href=" <%=ORSView.LOGIN_CTL%>?operation=<%=LoginCtl.OP_LOG_OUT%>">Logout</b></a> 
+       <a href=" <%=ORSView.LOGIN_CTL%>?operation=<%=LoginCtl.OP_LOG_OUT%>">Logout</a> 
 
             <%
                 } else {
             %> 
-            <a href="<%=ORSView.LOGIN_CTL%>">Login</b></a> 
+            <a href="<%=ORSView.LOGIN_CTL%>">Login</a> 
             <%
   			   } 
 			 %>
@@ -89,7 +89,14 @@
         <a href="<%=ORSView.FACULTY_LIST_CTL %>">Faculty List</b></a> |
         <a href="<%=ORSView.TIMETABLE_CTL %>" >Add TimeTable</b></a> |       
         <a href="<%=ORSView.TIMETABLE_LIST_CTL %>">TimeTable List</b></a> |
-        <a target="blank" href="<%=ORSView.JAVA_DOC_VIEW%>">Java Doc</b></a> |
+        <a href="<%=ORSView.Prescription_CTL%>">Add Prescription</b></a> |
+        <a href="<%=ORSView.PRESCRIPTION_LIST_CTL %>" >Prescription List</b></a> |         
+         <a href="<%=ORSView.CART_CTL %>" >Add Cart</b></a> |
+        <a href="<%=ORSView.CART_LIST_CTL %>" >Cart List</b></a> |         
+                       
+            
+        
+        <a target="blank" href="<%=ORSView.JAVA_DOC_VIEW%>">Java Doc</b></a> 
        <%
      		}
  		%>

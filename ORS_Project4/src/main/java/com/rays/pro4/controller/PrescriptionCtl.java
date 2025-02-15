@@ -134,7 +134,12 @@ public class PrescriptionCtl extends BaseCtl {
 
 			}
 
-		}
+		}else if (OP_CANCEL.equalsIgnoreCase(op)) {
+			System.out.println(" U  ctl Do post 77777");
+
+			ServletUtility.redirect(ORSView.PRESCRIPTION_LIST_CTL, request, response);
+			return;
+}
 		ServletUtility.forward(getView(), request, response);
 
 	}

@@ -18,7 +18,7 @@ import com.rays.pro4.Util.JDBCDataSource;
 /**
  * JDBC Implementation of Marksheet Model.
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  *
  */
 public class MarksheetModel {

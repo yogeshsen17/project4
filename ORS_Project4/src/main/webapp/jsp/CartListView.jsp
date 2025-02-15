@@ -86,8 +86,8 @@
 						placeholder="Enter Date"
 						value="<%=ServletUtility.getParameter("transactionDate", request)%>">
 					
-					<%--  <%=HTMLUtility.getList("carList", String.valueOf(bean.getTransactionDate()), carList)%>
- --%>						&nbsp; <input type="submit" name="operation"
+					  <%=HTMLUtility.getList("carList", String.valueOf(bean.getTransactionDate()), carList)%>
+ 						&nbsp; <input type="submit" name="operation"
 						value="<%=CartListCtl.OP_SEARCH%>"> &nbsp; <input
 						type="submit" name="operation" value="<%=CartListCtl.OP_RESET%>"></td>
 				</tr>

@@ -15,7 +15,7 @@ import com.rays.pro4.Model.FacultyModel;
 /**
  * Faculty  Model Test classes.
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  *
  */
 public class FacultyTest {

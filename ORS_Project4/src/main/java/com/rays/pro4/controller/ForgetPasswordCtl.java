@@ -24,7 +24,7 @@ import com.rays.pro4.Util.ServletUtility;
  * Forget Password functionality Controller. Performs operation for Forget
  * Password
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  */
 @WebServlet(name = "ForgetPasswordCtl", urlPatterns = { "/ForgetPasswordCtl" })
 public class ForgetPasswordCtl extends BaseCtl {

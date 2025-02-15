@@ -22,7 +22,7 @@ import com.rays.pro4.Util.JDBCDataSource;
 /**
  *  * JDBC Implementation of FacultyModel.
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  *
  */
 public class FacultyModel {

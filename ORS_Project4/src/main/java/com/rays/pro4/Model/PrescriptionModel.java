@@ -130,10 +130,15 @@ public class PrescriptionModel {
 	public List search(PrescriptionBean bean, int pageNo, int pageSize) throws Exception {
 
 		StringBuffer sql = new StringBuffer("select * from st_prescription where 1=1");
+		System.out.println("1");
 		if (bean != null) {
+			
+			System.out.println("2");
 
 			if (bean.getName() != null && bean.getName().length() > 0) {
-				sql.append(" AND prescriptionName like '" + bean.getName() + "%'");
+				sql.append(" and name like '" + bean.getName() + "%'");
+				System.out.println("3");
+
 			}
 
 //			if (bean.getDecase() != null && bean.getDecase().length() > 0) {
@@ -144,7 +149,7 @@ public class PrescriptionModel {
 
 			if (bean.getDate() != null && bean.getDate().getTime() > 0) {
 				Date d = new Date(bean.getDate().getTime());
-				sql.append(" AND purchaseDate = '" + d + "'");
+				sql.append(" and date = '" + d + "'");
 				System.out.println("done");
 			}
 //			if (bean.getDecase().length() > 0) {

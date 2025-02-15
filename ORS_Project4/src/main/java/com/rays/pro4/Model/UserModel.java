@@ -25,7 +25,7 @@ import com.rays.pro4.Util.JDBCDataSource;
 /**
  * JDBC Implementation of UserModel.
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  *
  */
 
@@ -319,7 +319,8 @@ public class UserModel {
 			}
 			if (bean.getDob() != null && bean.getDob().getTime() > 0) {
 		  		Date d = new java.sql.Date(bean.getDob().getTime());
-				sql.append(" AND DOB like '"+d+"%'");
+		  		System.out.println("model ");
+				sql.append(" AND DOB = '" + d + "%'");
 			}
 			if (bean.getMobileNo() != null && bean.getMobileNo().length() > 0) {
 				sql.append(" AND MOBILE_NO = " + bean.getMobileNo());

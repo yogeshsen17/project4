@@ -2,10 +2,11 @@ package com.rays.pro4.controller;
 
 
 /**
- *  @authorHimanshu Jain
+ *  @authorYogesh Sen
  *
  */
 public interface ORSView {
+	
 
 
 	    public String APP_CONTEXT = "/ORS_Project4";
@@ -46,6 +47,13 @@ public interface ORSView {
 		 public String TIMETABLE_LIST_VIEW = PAGE_FOLDER + "/TimeTableListView.jsp";
 		 public String ERROR_VIEW = PAGE_FOLDER + "/ErrorView.jsp";
 		 //   public String ERROR_VIEW5 = PAGE_FOLDER + "/ErrorView5.jsp";
+	   public String Prescription_VIEW = PAGE_FOLDER + "/PrescriptionView.jsp";
+		 public String PRESCRIPTION_LIST_VIEW = PAGE_FOLDER + "/PrescriptionListView.jsp";
+
+		 public String CART_VIEW = PAGE_FOLDER + "/CartView.jsp";
+		 public String CART_LIST_VIEW = PAGE_FOLDER + "/CartListView.jsp";
+
+
 		    
 
 	
@@ -79,5 +87,13 @@ public interface ORSView {
 		public String TIMETABLE_CTL = APP_CONTEXT + "/ctl/TimeTableCtl";
 	    public String TIMETABLE_LIST_CTL = APP_CONTEXT + "/ctl/TimeTableListCtl";
 	    public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
+	    public String Prescription_CTL = APP_CONTEXT + "/ctl/PrescriptionCtl";
+		public String PRESCRIPTION_LIST_CTL = APP_CONTEXT + "/ctl/PrescriptionListCtl";
+
+		public String CART_CTL = APP_CONTEXT + "/ctl/CartCtl";
+		public String CART_LIST_CTL = APP_CONTEXT + "/ctl/CartListCtl";
+
+
+
 	
 }

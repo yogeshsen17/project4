@@ -28,7 +28,7 @@
 		$("#udatee").datepicker({
 			changeMonth : true,
 			changeYear : true,
-			yearRange : '1980:2002',
+			yearRange : '1980:2006',
 		//  mindefaultDate : "01-01-1962"
 		});
 	});
@@ -59,9 +59,10 @@
 				List rlist = (List) request.getAttribute("RoleList");
 
 				//List ulist = (List) request.getAttribute("LoginId"); 
-				List ulist = (List) request.getAttribute("firstName");
+				/* List ulist = (List) request.getAttribute("ulist"); */
+				List dlist = (List) request.getAttribute("Ulist");
 
-				int next = DataUtility.getInt(request.getAttribute("nextlist") .toString());
+				int next = DataUtility.getInt(request.getAttribute("nextlist").toString());
 			%>
 
 
@@ -79,31 +80,30 @@
 				<tr>
 					<th></th>
 
-					<td align="center"><label>FirstName</font> :
-					</label> <input type="text" name="firstName" placeholder="Enter First Name"
-						value="<%=ServletUtility.getParameter("firstName", request)%>">
+					<td align="center"><label>FirstName</font> : </label> <input type="text" name="firstName" placeholder="Enter First Name"
+					value="<%=ServletUtility.getParameter("firstName", request)%>">
+						<%-- 	<%=HTMLUtility.getList("uid", String.valueOf(bean.getId()), ulist)%> --%>
 
-						<label></font> </label> <%=HTMLUtility.getList("id", String.valueOf(bean.getFirstName()), ulist)%>
-
-						<label>LoginId</font> :
-					</label> <input type="text" name="loginid" placeholder="Enter Login-Id"
-						value="<%=ServletUtility.getParameter("loginid", request)%>">
-						&emsp; <label>Role</font> :
-					</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%> <%-- 	&emsp; <label>Dob</font> :
+							<label></font> </label> <label>LoginId</font> :
+						</label> <input type="text" name="loginid" placeholder="Enter Login-Id"
+							value="<%=ServletUtility.getParameter("Loginid", request)%>">
+							&emsp; <label>Role</font> :
+						</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%>
+							<%-- 	&emsp; <label>Dob</font> :
 					</label> <%=HTMLUtility.getList("Dob", String.valueOf(bean.getDob(), rlist)%> --%>
-						&nbsp; <%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
+							&nbsp; <%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
  --%> &nbsp; <%-- <label>LastName</label><input type="text" name="LastName" value<%= ServletUtility.getParameter("LastName", request) %>> --%>
 
-						<%--  <label>DOB</font> :
+							 <%-- <label>DOB</font> :
 					</label> <input type="text" name="dob" placeholder="Enter dob" id="udatee"
 						readonly="readonly"
 						value="<%=ServletUtility.getParameter("dob", request)%>">
  
-  --%> <input type="submit" name="operation"
-						value="<%=UserListCtl.OP_SEARCH%>"> &nbsp; <input
-						type="submit" name="operation" value="<%=UserListCtl.OP_RESET%>">
-
-					</td>
+                        <%=HTMLUtility.getList("id", String.valueOf(bean.getDob()), dlist)%> --%>
+                        
+  <input type="submit" name="operation"
+							value="<%=UserListCtl.OP_SEARCH%>"> &nbsp; <input
+							type="submit" name="operation" value="<%=UserListCtl.OP_RESET%>"></td>
 				</tr>
 			</table>
 			<br>

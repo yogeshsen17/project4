@@ -14,7 +14,7 @@ import com.rays.pro4.Model.BaseModel;
 /**
  * HTML Utility class to produce HTML contents like Dropdown List.
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  *
  */
 public class HTMLUtility {
@@ -22,7 +22,7 @@ public class HTMLUtility {
 	public static String getList(String name, String selectedVal, HashMap<String, String> map) {
 
 		StringBuffer sb = new StringBuffer(
-				"<select style='width: 207px;  height: 23px;' class='form-control' name='" + name + "'>");
+				"<select style='width: 203px;  height: 23px;' class='form-control' name='" + name + "'>");
 
 		Set<String> keys = map.keySet();
 		String val = null;
@@ -30,7 +30,7 @@ public class HTMLUtility {
 		boolean select = true;
 		if (select) {
 			sb.append(
-					"<option style='width: 205px;  height: 25px;' selected value=''>--------------Select---------------------</option>");
+					"<option style='width: 203px;  height: 25px;' selected value=''>--------------Select---------------------</option>");
 		}
 
 		for (String key : keys) {
@@ -58,7 +58,7 @@ public class HTMLUtility {
 
 		Collections.sort(list);
 		StringBuffer sb = new StringBuffer(
-				"<select style='width: 211px;  height: 23px;' class='form-control' name='" + name + "'>");
+				"<select style='width: 203px;  height: 23px;' class='form-control' name='" + name + "'>");
 
 		boolean select = true;
 		if (select) {

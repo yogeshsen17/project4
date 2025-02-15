@@ -24,7 +24,7 @@ import com.rays.pro4.Util.ServletUtility;
  * My Profile functionality Controller. Performs operation for update your
  * Profile
  *
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  */
 @ WebServlet(name="MyProfileCtl",urlPatterns={"/ctl/MyProfileCtl"})
 public class MyProfileCtl extends BaseCtl{

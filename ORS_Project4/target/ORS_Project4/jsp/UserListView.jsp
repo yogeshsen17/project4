@@ -13,12 +13,12 @@
 <link rel="icon" type="image/png"
 	href="<%=ORSView.APP_CONTEXT%>/img/logo.png" sizes="16*16" />
 <title>User List</title>
- 
+
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 <script src="<%=ORSView.APP_CONTEXT%>/js/Checkbox11.js"></script>
 
 
-<link rel="stylesheet" 
+<link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -28,7 +28,7 @@
 		$("#udatee").datepicker({
 			changeMonth : true,
 			changeYear : true,
-			yearRange : '1980:2002',
+			yearRange : '1980:2006',
 		//  mindefaultDate : "01-01-1962"
 		});
 	});
@@ -46,8 +46,8 @@
 		<center>
 
 			<div align="center">
-				<h1 >User List</h1>
-				
+				<h1>User List</h1>
+
 				<h3>
 					<font color="red"><%=ServletUtility.getErrorMessage(request)%></font>
 					<font color="green"><%=ServletUtility.getSuccessMessage(request)%></font>
@@ -58,11 +58,13 @@
 			<%
 				List rlist = (List) request.getAttribute("RoleList");
 
-				List ulist = (List) request.getAttribute("LoginId");
+				//List ulist = (List) request.getAttribute("LoginId"); 
+				/* List ulist = (List) request.getAttribute("ulist"); */
+				List dlist = (List) request.getAttribute("Ulist");
 
-				int next = DataUtility.getInt(request.getAttribute("nextlist") .toString());
+				int next = DataUtility.getInt(request.getAttribute("nextlist").toString());
 			%>
- 
+
 
 			<%
 				int pageNo = ServletUtility.getPageNo(request);
@@ -77,36 +79,31 @@
 			<table width="100%" align="center">
 				<tr>
 					<th></th>
-					
-					<td align="center"><label>FirstName</font> :
-					</label> <input type="text" name="firstName" placeholder="Enter First Name"
-						value="<%=ServletUtility.getParameter("firstName", request)%>">
 
-						<label></font> </label> <%-- <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist) %> --%>
+					<td align="center"><label>FirstName</font> : </label> <input type="text" name="firstName" placeholder="Enter First Name"
+					value="<%=ServletUtility.getParameter("firstName", request)%>">
+						<%-- 	<%=HTMLUtility.getList("uid", String.valueOf(bean.getId()), ulist)%> --%>
 
-						<label>LoginId</font> :
-					</label> <input type="text" name="loginid" placeholder="Enter Login-Id"
-						value="<%=ServletUtility.getParameter("loginid", request)%>">
-						&emsp; <label>Role</font> :
-					</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%>
-						&nbsp; <%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
- --%> &nbsp;
- 
- <%-- <label>LastName</label><input type="text" name="LastName" value<%= ServletUtility.getParameter("LastName", request) %>> --%>
- 
-  <%--  <label>DOB</font> :
+							<label></font> </label> <label>LoginId</font> :
+						</label> <input type="text" name="loginid" placeholder="Enter Login-Id"
+							value="<%=ServletUtility.getParameter("Loginid", request)%>">
+							&emsp; <label>Role</font> :
+						</label> <%=HTMLUtility.getList("roleid", String.valueOf(bean.getRoleId()), rlist)%>
+							<%-- 	&emsp; <label>Dob</font> :
+					</label> <%=HTMLUtility.getList("Dob", String.valueOf(bean.getDob(), rlist)%> --%>
+							&nbsp; <%-- <%=HTMLUtility.getList("loginid", String.valueOf(bean.getRoleId()), ulist)%>
+ --%> &nbsp; <%-- <label>LastName</label><input type="text" name="LastName" value<%= ServletUtility.getParameter("LastName", request) %>> --%>
+
+							 <%-- <label>DOB</font> :
 					</label> <input type="text" name="dob" placeholder="Enter dob" id="udatee"
 						readonly="readonly"
 						value="<%=ServletUtility.getParameter("dob", request)%>">
  
-  --%>
-
-
-						<input type="submit" name="operation"
-						value="<%=UserListCtl.OP_SEARCH%>"> &nbsp; <input
-						type="submit" name="operation" value="<%=UserListCtl.OP_RESET%>">
- 
-					</td>
+                        <%=HTMLUtility.getList("id", String.valueOf(bean.getDob()), dlist)%> --%>
+                        
+  <input type="submit" name="operation"
+							value="<%=UserListCtl.OP_SEARCH%>"> &nbsp; <input
+							type="submit" name="operation" value="<%=UserListCtl.OP_RESET%>"></td>
 				</tr>
 			</table>
 			<br>
@@ -135,14 +132,13 @@
 							RoleBean rolebean = new RoleBean();
 							rolebean = model.findByPK(bean.getRoleId());
 				%>
-               
-               
+
+
 
 				<tr align="center">
 					<td><input type="checkbox" class="checkbox" name="ids"
 						value="<%=bean.getId()%>"
 						<%if (userBean.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) {%>
-					
 						<%="disabled"%> <%}%>></td>
 					<td><%=index++%></td>
 					<td><%=bean.getFirstName()%></td>
@@ -156,9 +152,9 @@
 						<%if (userBean.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) {%>
 						onclick="return false;" <%}%>>Edit</a></td>
 				</tr>
-				
-				
-				
+
+
+
 				<%
 					}
 				%>

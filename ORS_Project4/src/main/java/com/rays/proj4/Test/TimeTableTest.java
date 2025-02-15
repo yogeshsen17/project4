@@ -17,7 +17,7 @@ import com.rays.pro4.Model.TimeTableModel;
 /**
  * TimeTable Model Test classes.
  * 
- * @authorHimanshu Jain
+ * @authorYogesh Sen
  *
  */
 public class TimeTableTest {
