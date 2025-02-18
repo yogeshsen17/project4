@@ -52,6 +52,8 @@ public interface ORSView {
 
 		 public String CART_VIEW = PAGE_FOLDER + "/CartView.jsp";
 		 public String CART_LIST_VIEW = PAGE_FOLDER + "/CartListView.jsp";
+		 public String TRANSPORTATION_VIEW = PAGE_FOLDER + "/TransportationView.jsp";
+		 public String TRANSPORTATION_LIST_VIEW = PAGE_FOLDER + "/TransportationListView.jsp";
 
 
 		    
@@ -92,6 +94,9 @@ public interface ORSView {
 
 		public String CART_CTL = APP_CONTEXT + "/ctl/CartCtl";
 		public String CART_LIST_CTL = APP_CONTEXT + "/ctl/CartListCtl";
+		public String TRANSPORTATION_CTL = APP_CONTEXT + "/ctl/TransportationCtl";
+		public String TRANSPORTATION_LIST_CTL = APP_CONTEXT + "/ctl/TransportationListCtl";
+
 
 
 

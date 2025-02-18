@@ -1,5 +1,6 @@
-<%-- <%@page import="com.rays.pro4.Model.TransportationModel"%>
+<%@page import="com.rays.pro4.Model.TransportationModel"%>
 <%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
 <%@page import="com.rays.pro4.Bean.TransportationBean"%>
 <%@page import="com.rays.pro4.Bean.BaseBean"%>
 <%@page import="com.rays.pro4.Util.HTMLUtility"%>
@@ -53,14 +54,14 @@
 			</div>
 
 			<%
-				List tlist = (List) request.getAttribute("Description");
+				List tlist = (List) request.getAttribute("tlist");
 
 				int next = DataUtility.getInt(request.getAttribute("nextlist").toString());
 				
 				
 			%>
 			
-			<% Map map = (Map) request.getAttribute("cate"); %>
+			<% Map<Integer, String> map = (Map) request.getAttribute("cate"); %>
 
 
 			<%
@@ -78,8 +79,10 @@
 				     <th></th>
 					<td align="center">
 				     &emsp; <label>Description</font> :
-					</label> <%=HTMLUtility.getList("id", DataUtility.getStringData(bean.getDescription()),tlist )%>
-				
+				     </label> <input type="text" name="description" placeholder="Enter description"
+						value="<%=ServletUtility.getParameter("description", request)%>">
+<%-- 					</label> <%=HTMLUtility.getList("id", DataUtility.getStringData(bean.getDescription()),tlist )%>
+ --%>				
 				
 					<label>Cost</font> :
 					</label> <input type="text" name="cost" placeholder="Enter Cost"
@@ -87,7 +90,7 @@
 
 						
 						&nbsp; <label>Mode</font> :
-					</label><%=HTMLUtility.getList("mode", DataUtility.getStringData(bean.getMode()), map)%>
+					</label><%=HTMLUtility.getList2("mode", DataUtility.getStringData(bean.getMode()), map)%>
 						
 						
 
@@ -116,16 +119,18 @@
 				<%
 					while (it.hasNext()) {
 							bean = it.next();
+							TransportationModel model= new TransportationModel();
+							
 				%>
+				
 
 
 				<tr align="center">
-			<td><%=map.get(Integer.parseInt(bean.getImportance()))%></td>
 					<td><input type="checkbox" class="checkbox" name="ids"
 						value="<%=bean.getId()%>"></td>
 					<td><%=index++%></td>
 					<td><%=bean.getDescription()%></td>
-					<td><%=map.get(bean.getMode())%></td>
+					<td><%=map.get(Integer.parseInt(bean.getMode()))%></td>
 					<td><%=bean.getDate()%></td>
 					<td><%=bean.getCost()%></td>
 					<td><a href="TransportationCtl?id=<%=bean.getId()%>">Edit</a></td>
@@ -189,4 +194,4 @@
 
 	<%@include file="Footer.jsp"%>
 </body>
-</html> --%>
+</html>

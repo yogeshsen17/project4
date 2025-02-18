@@ -1,4 +1,4 @@
-<%-- <%@page import="java.util.Map"%>
+<%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>
 <%@page import="com.rays.pro4.Util.HTMLUtility"%>
@@ -79,7 +79,7 @@
 				</h3>
 
 				<%
-					Map map = (Map) request.getAttribute("cate");
+					Map<Integer, String> map = (Map) request.getAttribute("cate");
 				%>
 
 			</div>
@@ -94,7 +94,7 @@
 					<td><textarea type="text" name="description"
 							oninput=" handleLetterInput(this, 'discriptionError', 15)"
 							onblur=" validateLetterInput(this, 'discriptionError', 15)"
-							placeholder="Enter Discription" style="height: 34; width: 219;"><%=DataUtility.getStringData(bean.getDescription())%></textarea></td>
+							placeholder="Enter Discription" style="height: 34; width: 217;"><%=DataUtility.getStringData(bean.getDescription())%></textarea></td>
 					<td style="position: fixed"><font color="red"
 						id="discriptionError"><%=ServletUtility.getErrorMessage("description", request)%></font></td>
 
@@ -109,7 +109,7 @@
 					</th>
 					<td>
 						<%
-							String hlist = HTMLUtility.getList("mode", DataUtility.getStringData(bean.getMode()), map);
+							String hlist = HTMLUtility.getList2("mode", DataUtility.getStringData(bean.getMode()), map);
 						%> <%=hlist%>
 					</td>
 					<td style="position: fixed"><font color="red"> <%=ServletUtility.getErrorMessage("mode", request)%></font></td>
@@ -176,4 +176,4 @@
 
 	<%@ include file="Footer.jsp"%>
 </body>
-</html> --%>
+</html>
